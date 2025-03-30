@@ -1,0 +1,233 @@
+Michael: Hey Gabriela, got a minute? Need to vent before my next call or I might lose it on this
+
+customer.
+
+Gabriela: Sure, what's up? You look stressed.
+
+Michael: [frustrated] Just got off the phone with the Westridge team. They want to sign the
+
+contract this week—great news, right? Except our legal team says there's a minimum
+
+three-week review period for any contract over $100K. No exceptions.
+
+Gabriela: Let me guess—customer's fiscal year is ending, and they need to use the budget now
+
+or lose it?
+
+Michael: Exactly. They literally can't wait three weeks. Their procurement deadline is Friday. I've
+
+been working this deal for nine months, and now it might evaporate because our internal
+
+processes are stuck in 2010.
+
+Gabriela: I feel your pain. Had almost the exact same situation last quarter with a healthcare
+
+client. Lost a $350K deal because legal wouldn't expedite the review. Still bitter about that
+
+commission check.
+
+Michael: It's maddening. And my leadership's response? "You should have brought legal in
+
+earlier." I've been trying to get them involved for a month! They kept saying, "We don't review
+
+until there's a redlined contract."
+
+Gabriela: The classic catch-22. Can't get legal involved early, but also somehow should have
+
+involved them earlier.
+
+Michael: Precisely. And now my quota is at risk because of a process I have zero control over.
+
+Meanwhile, the customer keeps asking why a "nimble tech company" has more bureaucracy
+
+than their 100-year-old insurance firm.
+
+Gabriela: That's embarrassing. But I totally get it. Last week I had a customer ready to start
+
+implementation immediately. Super excited, budget approved, just waiting on our team. Then I
+
+find out our onboarding queue is six weeks long. Six weeks!
+
+Michael: Let me guess—they weren't happy about that timeline?
+
+Gabriela: They were shocked. Their direct competitor is already using a similar solution, so
+
+every week of delay puts them further behind. And there's absolutely nothing I can do to
+
+expedite it.
+
+Michael: That's the part that kills me. We're held responsible for customer satisfaction and
+
+hitting revenue targets, but we have zero authority to influence the systems and processes that
+
+directly impact those outcomes.
+
+Gabriela: It's completely backward. Yesterday I spent three hours on a call with a prospect
+
+walking through our security protocols. They had specific questions about our SSO
+
+implementation that I couldn't answer because the security team refuses to share those details
+
+with sales.
+
+Michael: Infuriating. And then the security team wonders why deals stall in the technical
+
+validation phase.
+
+Gabriela: Exactly! I literally had to tell an enterprise prospect, "I can't answer that question, but
+
+I'll get back to you," knowing full well that our security team takes 48-72 hours to respond to
+
+anything. Meanwhile, the competition's on the call with their security engineer right there.
+
+Michael: The silos in this company are unreal. Last month I needed a custom payment schedule
+
+for a customer—nothing crazy, just quarterly instead of annual billing. Took two weeks and nine
+
+different approvals to get it done.
+
+Gabriela: And I bet the customer was asking for daily updates the whole time.
+
+Michael: Daily is generous. Try hourly. Meanwhile, I'm chasing people down internally to push it
+
+through the process, all while trying to maintain the customer's trust. It's exhausting.
+
+Gabriela: The worst is when the internal teams have no sense of urgency because it's not their
+
+commission on the line. To them, it's just another ticket in the queue.
+
+Michael: Precisely. Revenue Operations keeps telling me my request is "in the backlog" as if
+
+that's at all helpful. This is a $200K ARR deal that could disappear because they can't prioritize
+
+a simple contract amendment.
+
+Gabriela: And then when the deal pushes or falls apart, guess who gets blamed? Not Legal. Not
+
+RevOps. Not the archaic approval process. Us.
+
+Michael: Every time. My VP literally asked in our last pipeline review why I "let" the Johnson
+
+deal slip to next quarter. Let it slip? I've been fighting our internal bureaucracy for weeks trying
+
+to get it closed!
+
+Gabriela: It's like they think we enjoy missing our quota and losing commission. As if we're
+
+deliberately sabotaging our own income.
+
+Michael: Right? Why would I choose to make less money? It makes no sense. But they refuse
+
+to acknowledge the systemic issues that are actually causing these problems.
+
+Gabriela: And don't get me started on our pricing approval process. Had a customer last week
+
+ask for a 10% discount—totally standard in our industry. Took five days and four levels of
+
+approval to get it signed off.
+
+Michael: By which point the customer's momentum had cooled, I'm guessing?
+
+Gabriela: Completely. They went from "ready to sign today" to "we'll review this next month." All
+
+because we couldn't respond at the speed of business.
+
+Michael: It's death by a thousand cuts. Each individual process or approval might make sense in
+
+isolation, but when you stack them all together, it's impossible to close deals efficiently.
+
+Gabriela: And meanwhile, more agile competitors are eating our lunch. I lost two deals last
+
+quarter to smaller companies that could simply move faster. Their whole sales cycle was shorter
+
+than just our legal review.
+
+Michael: That's what I'm up against with Westridge. Our competitor apparently turned around
+
+their contract in 48 hours. Meanwhile, I can't even get Legal to look at ours for another week.
+
+Gabriela: Have you tried escalating to your VP? Sometimes that's the only way to break through
+
+the bureaucracy.
+
+Michael: Three times. He says he "understands the frustration" but we need to "respect the
+
+process." Translation: You're on your own, buddy.
+
+Gabriela: Typical. Leadership talks about being "customer-centric" in all-hands meetings, then
+
+enforces policies that directly harm the customer experience.
+
+Michael: The cognitive dissonance is astounding. Yesterday our CEO sent a company-wide
+
+email about "moving with urgency" and "eliminating friction." I almost replied with screenshots of
+
+our 14-step contract approval workflow.
+
+Gabriela: [laughs] I would have paid to see that. The worst part is, I know exactly how this ends
+
+for Westridge. Either they walk away frustrated, or you have to offer them a massive discount to
+
+make up for the delay.
+
+Michael: And guess who takes the hit on that discount? Not the company—my commission. So
+
+I'm financially penalized for problems I didn't create and can't fix.
+
+Gabriela: It's a broken system. We're incentivized on results but have no control over the
+
+processes that determine those results.
+
+Michael: Exactly. And it takes a real mental toll. I lay awake at night stressing about deals that
+
+are stuck in internal limbo, knowing there's literally nothing I can do to move them forward.
+
+Gabriela: I know that feeling all too well. Last night I was up until 2 AM drafting a follow-up email
+
+to a prospect, knowing full well that the real blocker isn't my communication—it's our byzantine
+
+internal processes.
+
+Michael: It's demoralizing. Sometimes I wonder why I stay in sales when so much of my
+
+success depends on factors completely outside my control.
+
+Gabriela: I ask myself the same question regularly. The income is good, but the constant stress
+
+of fighting internal battles while maintaining a positive front for customers is exhausting.
+
+Michael: And it never seems to improve. Every quarter there's a new initiative to "streamline
+
+processes," but somehow we end up with more steps, not fewer.
+
+Gabriela: That's because those initiatives are led by people who don't actually have to use the
+
+processes. They add steps that make sense from a risk or compliance perspective without
+
+considering the real-world impact on deals.
+
+Michael: Precisely. I spent 30 minutes yesterday filling out a new "solution validation form" that
+
+asks for information already captured in three other systems. Pure redundancy that adds zero
+
+value.
+
+Gabriela: But heaven forbid you skip it—then it's a "process violation" that gets flagged to your
+
+manager. As if we're not busy enough actually selling.
+
+Michael: I should probably go prepare for my next call with Westridge. Somehow I need to
+
+convince them that we're a modern, efficient company while also explaining why our contract
+
+process is slower than the DMV.
+
+Gabriela: Good luck with that impossible task. Let me know if there's anything I can do to help.
+
+Michael: Thanks for listening. Sometimes just venting to someone who gets it helps maintain my
+
+sanity.
+
+Gabriela: Anytime. We're all in this together, fighting the same uphill battle against the very
+
+systems that should be supporting us.
