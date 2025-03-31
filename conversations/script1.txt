@@ -1,8 +1,5 @@
-Chris (Senior Account Executive at SecureScale
-
-Solutions)
-
-Olivia (Enterprise Sales Manager at NextGen Analytics)
+#Chris (Senior Account Executive at SecureScale Solutions)
+#Olivia (Enterprise Sales Manager at NextGen Analytics)
 
 Chris: Hey Olivia, did you see that email about the new comp plan?
 
