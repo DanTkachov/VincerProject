@@ -7,11 +7,11 @@ from prompts import make_prompt
     
 
 if __name__ == '__main__':
-    load_dotenv()
+    # load_dotenv()
 
-    CLAUDE_API_KEY = os.getenv("ANTHROPIC_API_KEY")
-
-    client = anthropic.Anthropic()
+    # CLAUDE_API_KEY = os.getenv("ANTHROPIC_API_KEY")
+    ANTHROPIC_API_KEY="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"
+    client = anthropic.Anthropic(api_key=ANTHROPIC_API_KEY)
 
     file = open("conversations/script1.txt", "r")
     script = ProcessScript(file)

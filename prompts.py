@@ -20,5 +20,8 @@ def make_prompt(convo_text):
     <stressor name>:<percentage>
     [Repeat the above structure for each of the five stressors]
 
+    Your message should ONLY have 5 lines: one for each stressor and its probability.
+    End each line with a '\n' delimiter.
+
     Ensure that your probability estimates are based solely on the content of the given conversation. Do not make assumptions beyond what is explicitly stated or strongly implied in the text. If there is insufficient information to make a confident estimate for any stressor, you may indicate this in your justification and provide a lower probability estimate.
     """

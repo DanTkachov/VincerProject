@@ -44,15 +44,22 @@ class ProcessScript:
         self.speakers = set(name for name in self.speaker_to_speech.keys())
 
     def display(self):
+        res = ""
         for speaker, speech in self.speaker_to_speech.items():
             width = 20
             print("#" * width)
+            res += "#" * width + '\n'
             print(f"{speaker}".center(width))
+            res += f"{speaker}".center(width) + '\n'
             print("#" * width)
+            res += "#" * width + '\n'
 
             for line in speech:
                 print(line)
+                res += line + '\n'
             print("END OF LINES".center(width, '-'))
+            res + "END OF LINES".center(width, '-') + '\n'
+        return res
     
     def raw_display(self, speaker):
         if speaker in self.speaker_to_speech.keys():
