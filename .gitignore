@@ -3,7 +3,6 @@
 venv
 
 # IDE specific files
-.idea/
 .vscode/
 *.swp
 *.swo
@@ -15,6 +14,14 @@ venv
 .env.production.local
 __pycache__
 *.code-workspace
+
+# PyCharm specific files
+.idea/
+*.iml
+*.iws
+*.ipr
+.idea_modules/
+out/
 
 # Cache
 __pycache__
