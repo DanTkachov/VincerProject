@@ -25,7 +25,7 @@ class ProcessScript:
                 
                 # We may encounter a situation where a time is given in a new line.
                 # In this case, make sure it has no numbers.
-                if any(char.isdigit() for char in name):
+                if any(not char.isalpha() and char != '-' and char != " " for char in name):
                     self.current_line = self.current_line + name + text
                     continue
 

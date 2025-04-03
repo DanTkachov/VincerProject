@@ -16,6 +16,11 @@ venv
 __pycache__
 *.code-workspace
 
+# Cache
+__pycache__
+*.py[cod]
+*$py.class
+
 # Logs
 logs
 *.log

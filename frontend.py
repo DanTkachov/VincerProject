@@ -3,6 +3,70 @@ import random
 import time 
 from io import StringIO
 from process_script import ProcessScript
+from api_calls import CallAPI
+from prompts import make_prompt
+
+def display_stressor_progress_bars(stressors, speaker_name):
+    """
+    Display stressors as progress bars where the fill corresponds to the percentage,
+    with percentages displayed at the end of each bar.
+    """
+    import streamlit as st
+    
+    # Add speaker name as header
+    st.subheader(f"{speaker_name}")
+    
+    # Sort stressors by value (highest first)
+    sorted_stressors = dict(sorted(stressors.items(), key=lambda item: item[1], reverse=True))
+    
+    # Custom CSS for better looking progress bars
+    st.markdown("""
+    <style>
+    .stressor-label {
+        font-weight: bold;
+        margin-bottom: 5px;
+        margin-top: 15px;
+    }
+    .stressbar-container {
+        display: flex;
+        align-items: center;
+        margin-bottom: 5px;
+    }
+    .stressbar-progress {
+        flex-grow: 1;
+        margin-right: 10px;
+    }
+    .stressbar-percent {
+        width: 45px;
+        font-weight: bold;
+    }
+    </style>
+    """, unsafe_allow_html=True)
+    
+    # Display each stressor as a progress bar with percentage at the end
+    for stressor, percentage in sorted_stressors.items():
+        # Display stressor name
+        st.markdown(f"<p class='stressor-label'>{stressor}</p>", unsafe_allow_html=True)
+        
+        # Create a container with flexbox to put progress bar and percentage side by side
+        col1, col2 = st.columns([9, 1])
+        
+        with col1:
+            # Choose color based on percentage
+            if percentage < 30:
+                color = "green"
+            elif percentage < 70:
+                color = "orange"
+            else:
+                color = "red"
+            
+            # Display progress bar without text
+            st.progress(percentage / 100.0)
+        
+        with col2:
+            # Display percentage at the end
+            st.markdown(f"<div style='text-align: right; font-weight: bold;'>{percentage}%</div>", unsafe_allow_html=True)
+
 
 
 api_key_default_message = "Copy-Paste your API key here."
@@ -14,18 +78,7 @@ if "api_key" not in st.session_state:
 if "show_api_key_success" not in st.session_state:
     st.session_state.show_api_key_success = False
 
-
-def mock_response():
-    responses = [
-        "Response 1: 98%",
-        "Response 2: 23%",
-        "Response 3: 60%"
-    ]
-    return random.choice(responses)
-
-
 file_upload_tab, api_key_tab = st.tabs(['File Upload & Process', 'Set API Key'])
-
 
 def save_api_key():
     if st.session_state.api_key != api_key_default_message and st.session_state.api_key.strip():
@@ -42,9 +95,6 @@ with file_upload_tab:
     if not st.session_state.api_key_saved:
         st.warning("You don't have an API key set. Set it before selecting a file.", icon=":material/warning:")
 
-    # if 'api_key_saved' in st.session_state:
-    #     st.write(st.session_state.api_key)
-
     uploaded_file = st.file_uploader("Choose a file", type=['txt'],accept_multiple_files=False)
     if uploaded_file is not None:
         file_details = {
@@ -55,13 +105,16 @@ with file_upload_tab:
 
         if st.button(label="Analyze"):
             file_text = StringIO(uploaded_file.getvalue().decode("utf-8"))
-            script = ProcessScript(file_text)
+            # script = ProcessScript(file_text)
 
-            st.write("File Content:")
-            st.text(script.display())
-            st.write(script.return_speakers())
+            with st.spinner(f'Processing API calls for all speakers...'):
+                speaker_api_call = CallAPI("", '', False, st.session_state.api_key, file_text)
+                claude_response = speaker_api_call.message()
+                stressors = speaker_api_call.parse_response(claude_response)
 
-    st.write('API Response: ', mock_response())
+            for person, stressors in stressors.items():
+                display_stressor_progress_bars(stressors=stressors, speaker_name=person)
+
 
 with api_key_tab:
     # Set success message to now show

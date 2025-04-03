@@ -14,7 +14,7 @@ class CallAPI:
         self.api_key = api_key
         self.file = file
 
-    def message(self, file):
+    def message(self):
         if self.dev_mode:
             load_dotenv()
             CLAUDE_API_KEY = os.getenv("ANTHROPIC_API_KEY")
@@ -46,21 +46,29 @@ class CallAPI:
                     }
                 ]
             )
-            res.append(message.content)
+            res.append([speaker, message.content])
+        print("RESULTS FORM MESSAGE:")
+        print(res)
         return res
 
     def parse_response(self, res):
-        text = res[0].text
+        stressors_dict = {} # list of (speaker -> stressors dict)
+        for speaker, response in res:
 
-        lines = text.split('\n')
-        stressors = {}
-        for line in lines:
-            if line.startswith('Analysis'):
-                break
-            if ':' in line and '%' in line:
-                parts = line.split(':')
-                stressor = parts[0].strip()
-                value = int(parts[1].strip().replace('%', ''))
-                stressors[stressor] = value
-        return stressors
+            stressors = {}
+
+            for item in response:
+                if hasattr(item, 'text'):
+                    text = item.text
+                    lines = text.split('\n')
+                    for line in lines:
+                        if line.startswith('Analysis'):
+                            break
+                        if ':' in line and '%' in line:
+                            parts = line.split(':')
+                            stressor = parts[0].strip()
+                            value = int(parts[1].strip().replace('%', ''))
+                            stressors[stressor] = value
+            stressors_dict[speaker] = stressors
+        return stressors_dict
 
