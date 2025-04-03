@@ -22,8 +22,11 @@ class CallAPI:
     def message(self):
         '''Send an API call for each speaker for analysis.'''
         if self.dev_mode:
-            load_dotenv()
-            CLAUDE_API_KEY = os.getenv("ANTHROPIC_API_KEY")
+            try:
+                load_dotenv()
+                CLAUDE_API_KEY = os.getenv("ANTHROPIC_API_KEY")
+            except:
+                print(".env file not found or no ANTHROPIC_API_KEY")
         else:
             CLAUDE_API_KEY = self.api_key
         
@@ -53,8 +56,6 @@ class CallAPI:
                 ]
             )
             res.append([speaker, message.content])
-        # print("RESULTS FORM MESSAGE:")
-        # print(res)
         return res
 
     def parse_response(self, res: list):

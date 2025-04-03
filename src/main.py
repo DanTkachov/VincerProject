@@ -73,8 +73,7 @@ def display_stressor_progress_bars(stressors, speaker_name):
 # api_key -> stores the actual API key
 if 'api_key_saved' not in st.session_state:
     st.session_state.api_key_saved = False
-# if "api_key" not in st.session_state:
-#     st.session_state.api_key = None
+
 
 file_upload_tab, api_key_tab = st.tabs(['File Upload & Process', 'Set API Key'])
 
@@ -82,7 +81,7 @@ file_upload_tab, api_key_tab = st.tabs(['File Upload & Process', 'Set API Key'])
 def save_api_key():
     if st.session_state.api_key != None and st.session_state.api_key.strip():
         st.session_state.api_key_saved = True
-        st.session_state.api_key = st.session_state.api_key
+        # st.session_state.api_key = st.session_state.api_key
         st.toast("API key saved successfully!", icon=":material/check_circle:")
 
 # Code for the File Upload tab

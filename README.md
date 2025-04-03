@@ -49,6 +49,19 @@ It uses Claude on the backend to make API calls to determine the likelihood of t
 
 6. Navigate to the localhost found in the console output.
 
+If you would like to use a .env file to store a key instead of pasting it into the "Set API Key" tab:
+1. After cloning, create a `.env` file. Use the format in the `.env.example` as a template. 
+2. Change Line 109 in `src/main.py` from
+
+ ```
+ speaker_api_call = CallAPI("", '', False, st.session_state.api_key, file_text)
+ ```
+ to:
+
+ ```
+ speaker_api_call = CallAPI("", '', True, st.session_state.api_key, file_text)
+ ```
+
 ## How this works
 
 A file is given by the user (`src/main.py`), which is then turned into a raw string in `src/process_script.py` before being passed on to `src/api_calls.py` which creates a message and sends it to Claude. After which, the response is parsed in `asrc/pi_calls.py` to create a hashmap of stressors to their percentages, which is then caught in `src/main.py` and displayed as bars.
