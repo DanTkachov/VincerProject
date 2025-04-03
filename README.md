@@ -43,14 +43,14 @@ It uses Claude on the backend to make API calls to determine the likelyhood of t
 
 5. With the venv activated, run streamlit:
 
-    `streamlit run frontend.py'
+    `streamlit run frontend.py`
 
 6. Navigate to the localhost found in the console output.
 
 
 
 # Dependencies
-___
+
  - anthropic
  - python-dotenv
  - requests
