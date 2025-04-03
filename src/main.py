@@ -10,14 +10,12 @@ def display_stressor_progress_bars(stressors, speaker_name):
     """
     Display stressors as progress bars where the fill corresponds to the percentage,
     with percentages displayed at the end of each bar.
-    """
-    import streamlit as st
-    
+    """    
     # Add speaker name as header
     st.subheader(f"{speaker_name}")
     
     # Sort stressors by value (highest first)
-    sorted_stressors = dict(sorted(stressors.items(), key=lambda item: item[1], reverse=True))
+    # sorted_stressors = dict(sorted(stressors.items(), key=lambda item: item[1], reverse=True))
     
     # Custom CSS for better looking progress bars
     st.markdown("""
@@ -44,7 +42,7 @@ def display_stressor_progress_bars(stressors, speaker_name):
     """, unsafe_allow_html=True)
     
     # Display each stressor as a progress bar with percentage at the end
-    for stressor, percentage in sorted_stressors.items():
+    for stressor, percentage in stressors.items():
         # Display stressor name
         st.markdown(f"<p class='stressor-label'>{stressor}</p>", unsafe_allow_html=True)
         
@@ -52,14 +50,6 @@ def display_stressor_progress_bars(stressors, speaker_name):
         col1, col2 = st.columns([9, 1])
         
         with col1:
-            # Choose color based on percentage
-            if percentage < 30:
-                color = "green"
-            elif percentage < 70:
-                color = "orange"
-            else:
-                color = "red"
-            
             # Display progress bar without text
             st.progress(percentage / 100.0)
         
@@ -81,7 +71,6 @@ file_upload_tab, api_key_tab = st.tabs(['File Upload & Process', 'Set API Key'])
 def save_api_key():
     if st.session_state.api_key != None and st.session_state.api_key.strip():
         st.session_state.api_key_saved = True
-        # st.session_state.api_key = st.session_state.api_key
         st.toast("API key saved successfully!", icon=":material/check_circle:")
 
 # Code for the File Upload tab
