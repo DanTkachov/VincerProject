@@ -39,8 +39,7 @@ class ProcessScript:
 
             except:
                 self.current_line += line
-            # print(line)
-            # print("_______")
+
         self.speakers = set(name for name in self.speaker_to_speech.keys())
 
     def display(self):
