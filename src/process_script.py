@@ -2,6 +2,12 @@ import os
 from collections import defaultdict
 
 class ProcessScript:
+    '''
+    This class processes a .txt file that serves as a script.
+    It expect each line to have a name, followed by a colon, followed by what was said.
+
+    Names are assumed to only contain alphabetic characters, spaces, and hyphens.
+    '''
     def __init__(self, file):
         self.file = file
         self.current_speaker = None
@@ -11,6 +17,10 @@ class ProcessScript:
         self.organize()
 
     def organize(self):
+        '''
+        Processes a file and organizes it into a hashmap
+        Hashmap has the following structure: {name -> list}. List contains the speakers speech.
+        '''
         for line in self.file:
             line = line.strip()
 
@@ -19,7 +29,7 @@ class ProcessScript:
                 continue
 
             # Try to get name and what they said. 
-            # If no name, thats a continuation of the last speaker.
+            # If no name, consider it a continuation of the last speaker.
             try:
                 name, text = line.split(":", 1)
                 
@@ -43,6 +53,10 @@ class ProcessScript:
         self.speakers = set(name for name in self.speaker_to_speech.keys())
 
     def display(self):
+        '''
+        Displays the hashmap of speakers and their words in a more human-readable format.
+        Returns the same display, which is optional.
+        '''
         res = ""
         for speaker, speech in self.speaker_to_speech.items():
             width = 20
@@ -57,14 +71,16 @@ class ProcessScript:
                 print(line)
                 res += line + '\n'
             print("END OF LINES".center(width, '-'))
-            res + "END OF LINES".center(width, '-') + '\n'
+            res += "END OF LINES".center(width, '-') + '\n'
         return res
     
     def raw_display(self, speaker):
+        '''Shows raw list of words from a speaker. Used for debugging.'''
         if speaker in self.speaker_to_speech.keys():
             return self.speaker_to_speech[speaker]
         else:
             return None
     
     def return_speakers(self):
+        '''Debug function for listing speakers in the hashmap.'''
         return self.speakers

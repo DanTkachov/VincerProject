@@ -1,4 +1,5 @@
 def make_prompt(convo_text):
+    '''Makes a prompt. Injects the conversation text in the middle for Claude to analyze.'''
     return f"""
     You are an AI system designed to analyze conversations and predict the probability of various psychological stressors appearing in the dialog. Your task is to examine the given conversation and estimate the likelihood of each of the following stressors being present:
 
@@ -23,5 +24,5 @@ def make_prompt(convo_text):
     Your message should ONLY have 5 lines: one for each stressor and its probability.
     End each line with a '\n' delimiter.
 
-    Ensure that your probability estimates are based solely on the content of the given conversation. Do not make assumptions beyond what is explicitly stated or strongly implied in the text. If there is insufficient information to make a confident estimate for any stressor, you may indicate this in your justification and provide a lower probability estimate.
+    Ensure that your probability estimates are based solely on the content of the given conversation. Do not make assumptions beyond what is explicitly stated or strongly implied in the text. If there is insufficient information to make a confident estimate for any stressor, you may indicate this by providing a lower probability estimate.
     """

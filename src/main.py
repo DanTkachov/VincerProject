@@ -68,26 +68,24 @@ def display_stressor_progress_bars(stressors, speaker_name):
             st.markdown(f"<div style='text-align: right; font-weight: bold;'>{percentage}%</div>", unsafe_allow_html=True)
 
 
-
-# api_key_default_message = "Copy-Paste your API key here."
-
+# Session variables
+# api_key_saved -> tracks if an API key has been saved
+# api_key -> stores the actual API key
 if 'api_key_saved' not in st.session_state:
     st.session_state.api_key_saved = False
 if "api_key" not in st.session_state:
     st.session_state.api_key = None
-if "show_api_key_success" not in st.session_state:
-    st.session_state.show_api_key_success = False
 
 file_upload_tab, api_key_tab = st.tabs(['File Upload & Process', 'Set API Key'])
 
+# Helper function to show a notification on saving a key.
 def save_api_key():
     if st.session_state.api_key != None and st.session_state.api_key.strip():
         st.session_state.api_key_saved = True
-        st.session_state.show_api_key_success = True
         st.session_state.api_key = st.session_state.api_key
         st.toast("API key saved successfully!", icon=":material/check_circle:")
 
-
+# Code for the File Upload tab
 with file_upload_tab:
 
     st.title('Probabilities of Stressors in a Conversation')
@@ -120,7 +118,10 @@ with api_key_tab:
     # Set success message to now show
     st.title("Set API Key")
 
-    current_value = st.session_state.api_key if st.session_state.api_key_saved else None
+    if st.session_state.api_key_saved:
+        current_value = st.session_state.api_key
+    else:
+        current_value = None
 
     api_key = st.text_input("Set Api Key:", 
         value=current_value,
